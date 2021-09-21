@@ -8,7 +8,9 @@
   <div id="D"></div>
   <div id="E"></div>
   <script>
-    //create a strong element and text node and add it to the DOM
+    //create a strong element and text node and add it to the DOM 
+    // innerHTML parses it if there is a tag in string
+    // innerHTML invokes a heavy and expensive HTML parser
     document.getElementById('A').innerHTML = '<strong>Hi</strong>';
     /* create a div element and text node to replace <span id="B"></div>
     (notice span#B is replaced) */
