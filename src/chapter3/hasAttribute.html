@@ -3,6 +3,8 @@
 
 <body>
    <a href='#' title="title" data-foo="dataFoo" style="margin:0;" class="yes" goo></a>
+   <input type="checkbox" checked></input>
+
    <script>
       var atts = document.querySelector('a');
       console.log(
@@ -14,6 +16,9 @@
          atts.hasAttribute('goo') /* Notice this is true regardless of whether a value
  is defined */
       )
+
+      var atts = document.querySelector('input');
+      console.log(atts.hasAttribute('checked')); //logs true
    </script>
 </body>
 
