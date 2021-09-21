@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Live DOM</title>
+</head>
+
+<body>
+   <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+   </ul>
+   <ul>
+      <li>apple</li>
+   </ul>
+   <script>
+      var list = document.querySelectorAll('ul');
+      console.log('initial child count', list[0].childElementCount);
+      var newLi = document.createElement('li');
+      newLi.textContent = 'Four';
+      document.querySelector('ul').appendChild(newLi);
+      console.log('after added child count', list[0].childElementCount);
+
+      setTimeout(function () {
+         var newNode = document.createTextNode('Hello New Node');
+         document.body.appendChild(newNode);
+         document.querySelector('ul').lastChild.remove();
+         console.log('after deleted child count', list[0].childElementCount);
+         console.log('final list length', list.length);
+      }, 2000);
+
+      console.log('initial list length', list.length);
+
+      // live or not live depend on matched node.
+      // querySelectorAll is not live for the matched node itself.
+      // But the children in matched list are live.
+   </script>
+</body>
+
+</html>
