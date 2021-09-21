@@ -2,18 +2,11 @@
 <html lang="en">
 
 <body>
-  <input type="text">
-  <input type="text">
-  <textarea>foo</textarea>
-  <textarea>bar</textarea>
-  <script>
-    //logs true, because they are exactly identical
-    var input = document.querySelectorAll('input');
-    console.log(input[0].isEqualNode(input[1]));
-    //logs false, because the child text node is not the same
-    var textarea = document.querySelectorAll('textarea');
-    console.log(textarea[0].isEqualNode(textarea[1]));
-  </script>
+ <!-- do they have the same ref instead of exactly equal -->
+ <script>
+   var result=document.body===document.body;
+   console.log('isIdentical',result);
+ </script>
 </body>
 
 </html>
