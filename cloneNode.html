@@ -2,14 +2,29 @@
 <html lang="en">
 
 <body>
-  <ul>
+  <ul onClick="handleClick()">
     <li>Hi</li>
     <li>there</li>
+    <script>
+      console.log('hello')
+    </script>
   </ul>
+
+  <p></p>
   <script>
     var cloneUL = document.querySelector('ul').cloneNode();
+    console.log('cloneUL', cloneUL);
+    var cloneUL2 = document.querySelector('ul').cloneNode(true);
+    console.log('cloneUL2 innerHTML', cloneUL2.innerHTML);
     console.log(cloneUL.constructor); //logs HTMLUListElement()
     console.log(cloneUL.innerHTML); //logs (an empty string) as only the ul was cloned
+
+
+    var para=document.querySelector('p');
+    para.appendChild(cloneUL2);
+    function handleClick(){
+      console.log('clicked');
+    }
   </script>
 </body>
 
