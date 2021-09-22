@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <script>
+      var docFrag = document.createDocumentFragment();
+      ["blue", "green", "red", "blue", "pink"].forEach(function (e) {
+         var li = document.createElement("li");
+         li.textContent = e;
+         docFrag.appendChild(li);
+      });
+      console.log(docFrag.textContent); //logs bluegreenredbluepink
+   </script>
+</body>
+
+</html>
