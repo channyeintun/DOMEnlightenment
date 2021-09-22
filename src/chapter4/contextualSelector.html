@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <div>
+      <ul>
+         <li class="liClass">Hello</li>
+         <li class="liClass">big</li>
+         <li class="liClass">bad</li>
+         <li class="liClass">world</li>
+      </ul>
+   </div>
+   <ul>
+      <li class="liClass">Hello</li>
+   </ul>
+   <script>
+      /* select a div as the context to run the selecting methods only on the
+      contents of the div */
+      var div = document.querySelector('div');
+      console.log(div.querySelector('ul'));
+      console.log(div.querySelectorAll('li'));
+      console.log(div.getElementsByTagName('li'));
+      console.log(div.getElementsByClassName('liClass'));
+   </script>
+</body>
+
+</html>

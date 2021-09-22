@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <style>
+      div {
+         height: 25px;
+         width: 25px;
+         background-color: red;
+         border: 25px solid gray;
+         padding: 25px;
+      }
+   </style>
+</head>
+
+<body>
+   <div></div>
+   <script>
+      var div = document.querySelector('div').getBoundingClientRect();
+      console.log(div.height, div.width); //logs '125 125'  (Border+ Padding+Content)
+
+      //because 25px border + 25px padding + 25 content + 25 padding + 25 border = 125
+
+
+      var div = document.querySelector('div');
+      console.log(div.offsetHeight, div.offsetWidth); //logs '125 125' (Border + padding + content)
+      //because 25px border + 25px padding + 25 content + 25 padding + 25 border = 125
+
+
+      var div = document.querySelector('div');
+      console.log(div.clientHeight, div.clientWidth); /* logs '75 75' because (Padding+Content)
+ 25px padding + 25 content +
+ 25 padding = 75 */
+
+
+// offsetWidth, offsetHeight, clientWidth, clientHeight, scrollWidth, scrollHeight
+   </script>
+</body>
+
+</html>
