@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <div>click me</div>
+   <script>
+      document.querySelector('div').addEventListener('click', function () {
+         // 'this' will be the element or node the event listener is attached to
+         console.log(this); //logs '<div>'
+      }, false);
+   </script>
+</body>
+
+</html>

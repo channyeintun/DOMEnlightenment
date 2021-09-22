@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <div>click me</div>
+   <script>
+      document.querySelector('div').addEventListener('click', function (event) {
+         Object.keys(event).sort().forEach(function (item) {
+            console.log(item + ' = ' + event[item]); //logs event properties and values
+         });
+      }, false);
+      //assumes 'this' is window
+      this.addEventListener('load', function (event) {
+         Object.keys(event).sort().forEach(function (item) {
+            console.log(item + ' = ' + event[item]); //logs event properties and values
+         });
+      }, false);
+
+      //The event object also provides the stopPropagation(), 
+      //stopImmediatePropagation(), and preventDefault() methods.
+   
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <div>click me</div>
+   <script>
+      //first event attached
+      document.querySelector('div').addEventListener('click', function () {
+         console.log('I get invoked because I was attached first');
+      }, false);
+      //second event attached
+      document.querySelector('div').addEventListener('click', function (event) {
+         console.log('I get invoked, but stop any other click events on this target');
+         event.stopImmediatePropagation();
+      }, false);
+      /* third event attached, but because stopImmediatePropagation() was called above
+      this event does not get invoked */
+      document.querySelector('div').addEventListener('click', function () {
+         console.log('I get stopped from the previous click event listener');
+      }, false);
+      /* notice that the event flow is also cancelled as if stopPropagation was
+      called too */
+      document.body.addEventListener('click', function () {
+         console.log('What, denied from being invoked!');
+      }, false);
+   </script>
+</body>
+
+</html>

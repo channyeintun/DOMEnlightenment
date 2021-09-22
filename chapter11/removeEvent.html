@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <div>click to say hi</div>
+   <script>
+      var sayHi = function () { console.log('hi') };
+      //adding event listener using anonymous function
+      document.body.addEventListener('click', function () { console.log('dude'); }, false);
+      //adding event listener using function reference
+      document.querySelector('div').addEventListener('click', sayHi, false);
+      /* attempt to remove both event listeners, but only the listener added with a
+      function reference is removed */
+      document.querySelector('div').removeEventListener('click', sayHi, false);
+      /* this of course does not work as the function passed to removeEventListener is a
+      new and different function */
+      document.body.removeEventListener('click', function () { console.log('dude'); }, false);
+/* clicking the div will still invoke the click event attached to the body
+      element, this event was not removed */
+   </script>
+</body>
+
+</html>

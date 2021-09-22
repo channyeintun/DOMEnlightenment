@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- inline attribute event handler pattern -->
+
+<body onclick="console.log('fire/trigger attribute event handler')">
+   <div>click me</div>
+   <script>
+      var elementDiv = document.querySelector('div');
+      // property event handler pattern
+      elementDiv.onclick = function () { console.log('fire/trigger property event handler') };
+      //addEventListener method pattern
+      elementDiv.addEventListener('click', function () { console.log('fire/trigger addEventListener') }, false);
+   </script>
+</body>
+
+</html>

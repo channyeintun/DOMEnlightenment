@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <a href="google.com">no go</div>
+      <input type="checkbox" />
+      <textarea></textarea>
+      <script>
+         document.querySelector('a').addEventListener('click', function (event) {
+            event.preventDefault(); /* stop the default event for <a>, which would be to load
+ a url */
+         }, false);
+         document.querySelector('input').addEventListener('click', function (event) {
+            event.preventDefault(); /* stop default event for checkbox, which would be to
+ toggle checkbox state */
+         }, false);
+         document.querySelector('textarea').addEventListener('keypress', function (event) {
+            event.preventDefault(); /* stop default event for textarea, which would be to add
+ characters typed */
+         }, false);
+         /* keep in mind that events still propagate, clicking the link in this html
+         document will stop the default event but not event bubbling */
+         document.body.addEventListener('click', function () {
+            console.log('the event flow still flows!');
+         }, false);
+      </script>
+
+
+      //stopPropagation is for halting event.
+</body>
+
+</html>

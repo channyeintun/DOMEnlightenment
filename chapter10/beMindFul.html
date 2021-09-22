@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- stop parsing, block parsing, execute js then resume... -->
+   <script>
+      /* we can't script the body element yet, it's null, not even been parsed by the
+      browser, it's not in the DOM yet */
+      console.log(document.body.innerHTML); /* logs Uncaught TypeError: Cannot read
+ property 'innerHTML' of null */
+   </script>
+</head>
+
+<body>
+   <strong>Hi</strong>
+</body>
+
+</html>
