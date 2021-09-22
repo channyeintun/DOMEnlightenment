@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <style id="styleElement">
+      body {
+         background-color: #fff;
+         margin: 20px;
+      }
+
+      /* this is a css rule */
+      p {
+         line-height: 1.4em;
+         color: blue;
+      }
+
+      /* this is a css rule */
+   </style>
+</head>
+
+<body>
+   <script>
+      var sSheet = document.querySelector('#styleElement').sheet;
+      console.log(sSheet.cssRules[0].cssText); /* logs "body { background-color: red;
+ margin: 20px; }" */
+      console.log(sSheet.cssRules[1].cssText); /* logs "p { line-height: 1.4em;
+ color: blue; }" */
+   </script>
+</body>
+
+</html>

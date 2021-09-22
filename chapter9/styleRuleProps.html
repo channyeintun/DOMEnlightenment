@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <style id="styleElement">
+      body {
+         background-color: #fff;
+      }
+   </style>
+</head>
+
+<body>
+   <script>
+      var styleSheetRule = document.querySelector('#styleElement').sheet.cssRule;
+      //text own properties
+      console.log(Object.keys(styleSheetRule).sort());
+      //text own properties and inherited properties
+      var styleSheetPropertiesIncludeInherited = [];
+      for (var p in styleSheetRule) {
+         styleSheetRulePropertiesIncludeInherited.push(p);
+      }
+      console.log(styleSheetRulePropertiesIncludeInherited.sort());
+      //text inherited properties only
+      var styleSheetRulePropertiesOnlyInherited = [];
+      for (var p in styleSheetRule) {
+         if (!styleSheetRule.hasOwnProperty(p)) {
+            styleSheetRulePropertiesOnlyInherited.push(p);
+         }
+      }
+      console.log(styleSheetRulePropertiesOnlyInherited.sort());
+   </script>
+</body>
+
+</html>

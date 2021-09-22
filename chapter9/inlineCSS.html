@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+<body>
+   <p>Hey <strong>Dude!</strong></p>
+   <script>
+      var styleElm = document.createElement('style');
+      styleElm.innerHTML = 'body{color:red}';
+      //notice markup in the document changed to red from our new inline stylesheet
+      document.querySelector('head').appendChild(styleElm);
+   </script>
+</body>
+
+</html>

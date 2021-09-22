@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <style id="styleElement">
+      p {
+         color: blue;
+      }
+
+      strong {
+         color: green;
+      }
+   </style>
+</head>
+
+<body>
+   <p>Hey <strong>Dude!</strong></p>
+   <script>
+      var styleSheet = document.querySelector('#styleElement').sheet;
+      //Set css rules in stylesheet
+      styleSheet.cssRules[0].style.color = 'red';
+      styleSheet.cssRules[1].style.color = 'purple';
+      //Get css rules
+      console.log(styleSheet.cssRules[0].style.color); //logs 'red'
+      console.log(styleSheet.cssRules[1].style.color); //logs 'purple'
+   </script>
+</body>
+
+</html>

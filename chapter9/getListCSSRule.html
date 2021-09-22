@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <style id="styleElement">
+      body {
+         background-color: #fff;
+         margin: 20px;
+      }
+
+      p {
+         line-height: 1.4em;
+         color: blue;
+      }
+   </style>
+</head>
+
+<body>
+   <script>
+      var sSheet = document.querySelector('#styleElement').sheet;
+      /* arraylike list containing all of the CSSrule objects representing each CSS
+      rule in the stylesheet */
+      console.log(sSheet.cssRules);
+      console.log(sSheet.cssRules.length); //logs 2
+      //rules are indexed in a CSSRules list starting at a 0 index
+      console.log(sSheet.cssRules[0]); //logs first rule
+      console.log(sSheet.cssRules[1]); //logs second rule
+   </script>
+</body>
+
+</html>

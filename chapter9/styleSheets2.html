@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <link id="linkElement" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css" rel="stylesheet"
+      type="text/css">
+   <style id="styleElement">
+      body {
+         background-color: #fff;
+      }
+   </style>
+</head>
+
+<body>
+   <script>
+      //get CSSStylesheet object for <link>
+      console.log(document.querySelector('#linkElement').sheet);
+      //same as document.styleSheets[0]
+      //get CSSStylesheet object for <style>
+      console.log(document.querySelector('#styleElement').sheet);
+ //same as document.styleSheets[1]
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+<body>
+   <script>
+      //create and add attributes to <link>
+      var linkElm = document.createElement('link');
+      linkElm.setAttribute('rel', 'stylesheet');
+      linkElm.setAttribute('type', 'text/css');
+      linkElm.setAttribute('id', 'linkElement');
+      linkElm.setAttribute('href',
+         'http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css');
+      //Append to the DOM
+      document.head.appendChild(linkElm);
+      //confirm its addition to the DOM
+      console.log(document.querySelector('#linkElement'));
+   </script>
+</body>
+
+</html>
