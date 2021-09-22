@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <script>
+      //create a <div> and document fragment
+      var divElm = document.createElement('div');
+      var docFrag = document.createDocumentFragment();
+      //append div to document fragment
+      docFrag.appendChild(divElm);
+      //create a DOM structure from a string
+      docFrag.querySelector('div').innerHTML = '<ul><li>foo</li><li>bar</li></ul>';
+      /* the string becomes a DOM structure I can call methods on like
+      querySelectorAll() */
+      //Just don't forget the DOM structure is wrapped in a <div>
+      console.log(docFrag.querySelectorAll('li').length); //logs 2
+   </script>
+</body>
+
+</html>
