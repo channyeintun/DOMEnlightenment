@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <p>Hi, <strong>cody</strong> welcome!</p>
+   <script>
+      var pElement = document.querySelector('p');
+      console.log(pElement.childNodes.length); //logs 3
+      console.log(pElement.firstChild.data); // is text node or 'Hi, '
+      console.log(pElement.firstChild.nextSibling); // is Element node or <strong>
+      console.log(pElement.lastChild.data); // is text node or ' welcome!'
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+innerText ignores hidden text because it cares about css while textContent doesn't.

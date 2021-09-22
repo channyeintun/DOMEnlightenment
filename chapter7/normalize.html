@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <div></div>
+   <script>
+      var pElementNode = document.createElement('p');
+      var textNodeHi = document.createTextNode('Hi');
+      var textNodeCody = document.createTextNode('Cody');
+      pElementNode.appendChild(textNodeHi);
+      pElementNode.appendChild(textNodeCody);
+      document.querySelector('div').appendChild(pElementNode);
+      console.log(document.querySelector('p').childNodes.length); //logs 2
+      document.querySelector('div').normalize(); //combine our sibling text nodes
+      console.log(document.querySelector('p').childNodes.length); //logs 1
+   </script>
+</body>
+
+</html>

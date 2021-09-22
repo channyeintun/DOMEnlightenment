@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <p>Go big Blue Blue</p>
+   <script>
+      var pElementText = document.querySelector('p').firstChild;
+      //add !
+      pElementText.appendData('!');
+      console.log(pElementText.data);
+      //remove first 'Blue'
+      pElementText.deleteData(7, 5);
+      console.log(pElementText.data);
+      //insert it back 'Blue'
+      pElementText.insertData(7, 'Blue ');
+      console.log(pElementText.data);
+      //replace first 'Blue' with 'Bunny'
+      pElementText.replaceData(7, 5, 'Bunny ');
+      console.log(pElementText.data);
+      //extract substring 'Blue Bunny'
+      console.log(pElementText.substringData(7, 10));
+   </script>
+</body>
+
+</html>
