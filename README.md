@@ -1,1 +1,1 @@
-# DOM Enlightment source code
+# DOM Enlightenment source code
